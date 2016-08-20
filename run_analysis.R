@@ -40,9 +40,9 @@ subj_test <- read.table(file.path(wd, "test", "subject_test.txt"))
 ## train data
 # X_train.txt
 X_train <- read.table(file.path(wd, "train", "X_train.txt"))
-# y_test.txt
+# y_train.txt
 Y_train <- read.table(file.path(wd, "train", "y_train.txt"))
-# subject_test.txt
+# subject_train.txt
 subj_train <- read.table(file.path(wd, "train", "subject_train.txt"))
 
 ## ============================================================================
@@ -148,7 +148,39 @@ features <- gsub("\\)", "", features)
 features <- gsub("\\,", "", features)
 features <- gsub("\\-", "", features)
 
+# features does not contain the last two column names for data2, "subj" 
+# and "activitydesc"
+features <- c(features, "subj", "activitydesc")
 
-## In case I want to use tidyr:
-# load tidyr library
-# library("tidyr")
+# rename columns in data2 to the descriptive names in features
+# note: this technique would not work if there were a chance the data columns
+# would change position.  However, since the course assignment does not include
+# instructions to account for this contingency, this code assumes the data is 
+# static
+names(data2) <- features
+
+## ============================================================================
+## Assignment Part 5:
+# 5.	From the data set in step 4, creates a second, independent tidy data set
+#           with the average of each variable for each activity and each subject.
+
+# i want to use 'melt' and 'dcast' so need to load reshape2 package
+# install.packages("reshape2") 
+library(reshape2)
+
+# melt the data in data2 setting the subject and activity as the IDs
+data_melt <- melt(data2, id=c("subj", "activitydesc"))
+
+# re-cast the data in wide form, providing the mean of each subject/ activity pair
+# each variable has its own column
+data_tidy <- dcast(data_melt, subj + activitydesc ~ variable, mean)
+
+# write the data to the user's working directory, setting row names to false
+# as directed by project instructions
+write.table(data_tidy, "mytidydata.txt", row.names = FALSE)
+
+## to read file use: 
+## (taken from thethoughtfulbloke helpful posting on this assignment: 
+## https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/)
+# data <- read.table(file_path, header = TRUE)
+# View(data)
