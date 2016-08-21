@@ -67,11 +67,12 @@ Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ort
 ##Creating the tidy data set using run_analysis.R
 
 To create the tidy data file from the UCI HAR dataset:
-1. Download the UCI HAR data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-2. Set R's working directory to the UCI HAR data file location
-2. Download run_analysis.R from https://github.com/HelpfulMe/GetCleanDataProject
-3. In R, source the run_analysis code to run run_analysis (you can use 'source("run_analysis.R")')
-4. Code will create a tidy dataset titled "mytidydata.txt" in the user's working directory
+
+* Download the UCI HAR data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+* Set R's working directory to the UCI HAR data file location
+* Download run_analysis.R from https://github.com/HelpfulMe/GetCleanDataProject
+* In R, source the run_analysis code to run run_analysis (you can use 'source("run_analysis.R")')
+* Code will create a tidy dataset titled "mytidydata.txt" in the user's working directory
 
 
 ##Cleaning of the data
@@ -108,93 +109,94 @@ The following describes how the run_analysis.R code cleans and tidies the data f
 The mean of each variable is calculated for each subject-activitydesc pairing.  There are 30 subjects with 6 activities each for a total of 180 subject-activity pairings.  Only variables including 'mean' or 'std' are included in the tidy data.
 
 ###Variables: (with data type)
- subj - integer
- activitydesc - character
- tbodyaccmeanx - numerical
- tbodyaccmeany - numerical
- tbodyaccmeanz - numerical
- tbodyaccstdx - numerical  
- tbodyaccstdy - numerical 
- tbodyaccstdz - numerical
- tgravityaccmeanx - numerical
- tgravityaccmeany - numerical
- tgravityaccmeanz - numerical  
- tgravityaccstdx - numerical  
- tgravityaccstdy - numerical
- tgravityaccstdz - numerical
- tbodyaccjerkmeanx - numerical
- tbodyaccjerkmeany - numerical
- tbodyaccjerkmeanz - numerical
- tbodyaccjerkstdx - numerical  
- tbodyaccjerkstdy - numerical 
- tbodyaccjerkstdz - numerical  
- tbodygyromeanx - numerical   
- tbodygyromeany - numerical 
- tbodygyromeanz - numerical 
- tbodygyrostdx - numerical 
- tbodygyrostdy - numerical 
- tbodygyrostdz - numerical  
- tbodygyrojerkmeanx - numerical
- tbodygyrojerkmeany - numerical
- tbodygyrojerkmeanz - numerical   
- tbodygyrojerkstdx - numerical 
- tbodygyrojerkstdy - numerical
- tbodygyrojerkstdz - numerical 
- tbodyaccmagmean - numerical  
- tbodyaccmagstd - numerical 
- tgravityaccmagmean - numerical 
- tgravityaccmagstd - numerical
- tbodyaccjerkmagmean - numerical  
- tbodyaccjerkmagstd - numerical 
- tbodygyromagmean - numerical 
- tbodygyromagstd - numerical 
- tbodygyrojerkmagmean - numerical 
- tbodygyrojerkmagstd - numerical 
- fbodyaccmeanx - numerical
- fbodyaccmeany - numerical 
- fbodyaccmeanz - numerical
- fbodyaccstdx - numerical
- fbodyaccstdy - numerical
- fbodyaccstdz - numerical
- fbodyaccmeanfreqx - numerical
- fbodyaccmeanfreqy - numerical
- fbodyaccmeanfreqz - numerical 
- fbodyaccjerkmeanx - numerical 
- fbodyaccjerkmeany - numerical
- fbodyaccjerkmeanz - numerical
- fbodyaccjerkstdx - numerical
- fbodyaccjerkstdy - numerical 
- fbodyaccjerkstdz - numerical
- fbodyaccjerkmeanfreqx - numerical
- fbodyaccjerkmeanfreqy - numerical
- fbodyaccjerkmeanfreqz - numerical
- fbodygyromeanx - numerical
- fbodygyromeany - numerical
- fbodygyromeanz - numerical
- fbodygyrostdx - numerical 
- fbodygyrostdy - numerical  
- fbodygyrostdz - numerical
- fbodygyromeanfreqx - numerical
- fbodygyromeanfreqy - numerical 
- fbodygyromeanfreqz - numerical 
- fbodyaccmagmean - numerical
- fbodyaccmagstd - numerical  
- fbodyaccmagmeanfreq - numerical
- fbodybodyaccjerkmagmean - numerical 
- fbodybodyaccjerkmagstd - numerical 
- fbodybodyaccjerkmagmeanfreq - numerical 
- fbodybodygyromagmean - numerical
- fbodybodygyromagstd - numerical
- fbodybodygyromagmeanfreq - numerical 
- fbodybodygyrojerkmagmean - numerical 
- fbodybodygyrojerkmagstd - numerical
- fbodybodygyrojerkmagmeanfreq - numerical 
- angletbodyaccmeangravity - numerical 
- angletbodyaccjerkmeangravitymean - numerical
- angletbodygyromeangravitymean - numerical 
- angletbodygyrojerkmeangravitymean - numerical
- anglexgravitymean - numerical 
- angleygravitymean - numerical 
+
+* subj - integer
+* activitydesc - character
+* tbodyaccmeanx - numerical
+* tbodyaccmeany - numerical
+* tbodyaccmeanz - numerical
+* tbodyaccstdx - numerical  
+* tbodyaccstdy - numerical 
+* tbodyaccstdz - numerical
+* tgravityaccmeanx - numerical
+* tgravityaccmeany - numerical
+* tgravityaccmeanz - numerical  
+* tgravityaccstdx - numerical  
+* tgravityaccstdy - numerical
+* tgravityaccstdz - numerical
+* tbodyaccjerkmeanx - numerical
+* tbodyaccjerkmeany - numerical
+* tbodyaccjerkmeanz - numerical
+* tbodyaccjerkstdx - numerical  
+* tbodyaccjerkstdy - numerical 
+* tbodyaccjerkstdz - numerical  
+* tbodygyromeanx - numerical   
+* tbodygyromeany - numerical 
+* tbodygyromeanz - numerical 
+* tbodygyrostdx - numerical 
+* tbodygyrostdy - numerical 
+* tbodygyrostdz - numerical  
+* tbodygyrojerkmeanx - numerical
+* tbodygyrojerkmeany - numerical
+* tbodygyrojerkmeanz - numerical   
+* tbodygyrojerkstdx - numerical 
+* tbodygyrojerkstdy - numerical
+* tbodygyrojerkstdz - numerical 
+* tbodyaccmagmean - numerical  
+* tbodyaccmagstd - numerical 
+* tgravityaccmagmean - numerical 
+* tgravityaccmagstd - numerical
+* tbodyaccjerkmagmean - numerical  
+* tbodyaccjerkmagstd - numerical 
+* tbodygyromagmean - numerical 
+* tbodygyromagstd - numerical 
+* tbodygyrojerkmagmean - numerical 
+* tbodygyrojerkmagstd - numerical 
+* fbodyaccmeanx - numerical
+* fbodyaccmeany - numerical 
+* fbodyaccmeanz - numerical
+* fbodyaccstdx - numerical
+* fbodyaccstdy - numerical
+* fbodyaccstdz - numerical
+* fbodyaccmeanfreqx - numerical
+* fbodyaccmeanfreqy - numerical
+* fbodyaccmeanfreqz - numerical 
+* fbodyaccjerkmeanx - numerical 
+* fbodyaccjerkmeany - numerical
+* fbodyaccjerkmeanz - numerical
+* fbodyaccjerkstdx - numerical
+* fbodyaccjerkstdy - numerical 
+* fbodyaccjerkstdz - numerical
+* fbodyaccjerkmeanfreqx - numerical
+* fbodyaccjerkmeanfreqy - numerical
+* fbodyaccjerkmeanfreqz - numerical
+* fbodygyromeanx - numerical
+* fbodygyromeany - numerical
+* fbodygyromeanz - numerical
+* fbodygyrostdx - numerical 
+* fbodygyrostdy - numerical  
+* fbodygyrostdz - numerical
+* fbodygyromeanfreqx - numerical
+* fbodygyromeanfreqy - numerical 
+* fbodygyromeanfreqz - numerical 
+* fbodyaccmagmean - numerical
+* fbodyaccmagstd - numerical  
+* fbodyaccmagmeanfreq - numerical
+* fbodybodyaccjerkmagmean - numerical 
+* fbodybodyaccjerkmagstd - numerical 
+* fbodybodyaccjerkmagmeanfreq - numerical 
+* fbodybodygyromagmean - numerical
+* fbodybodygyromagstd - numerical
+* fbodybodygyromagmeanfreq - numerical 
+* fbodybodygyrojerkmagmean - numerical 
+* fbodybodygyrojerkmagstd - numerical
+* fbodybodygyrojerkmagmeanfreq - numerical 
+* angletbodyaccmeangravity - numerical 
+* angletbodyaccjerkmeangravitymean - numerical
+* angletbodygyromeangravitymean - numerical 
+* angletbodygyrojerkmeangravitymean - numerical
+* anglexgravitymean - numerical 
+* angleygravitymean - numerical 
  
 ---
 ##Sources
