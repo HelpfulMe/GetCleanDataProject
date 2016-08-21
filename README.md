@@ -1,29 +1,18 @@
-# GetCleanDataProject
-Public repo for my Getting and Cleaning Data Course Project on Coursera
+# Getting and Cleaning Data Course Project
+This repository contains my Getting and Cleaning Data Course Project information for the Johns Hopkins Bloomberg School of Public Health course on Coursera.
 
-include a README.md in the repo describing how the script works
+# Contents
+This repository contains: 
+*README.md - a readme document containing details on what the script does and how to run it
+*CodeBook.md - a CodeBook containing a description of the tidy data set, as well as deatils on how run_analysis creates the tidy data set. 
+* run_analysis.R - R code creating a tidy data set from UCI-HAR
+* mytidydata.txt - text file containing tidy data created by run_analysis.R and described in codebook.md
 
-In the submission box, as well as the link, put some accompanying text on another line something like "tidy data as per the ReadMe that can be read into R with read.table(header=TRUE) {listing any settings you have changed from the default}" This is just to make it really easy for your reviewer.
-In the readMe in explaining what the script does put "and then generates a tidy data text file that meets the principles of .etc"
-the truly cunning may want to put in a citation to this discussion and/or Hadley's paper
-The codebook still has the specific description of the tidy data file contents (and you mention that it exists and it's role in the ReadMe)
-##README.md
-
-##CodeBook.md
-Contains description of the tidy data set
-
-##run_analysis.R
-Code that creates 'mytidydata.txt' file with tidy data from the UCI HAR dataset
-To use: 
-*Download run_analysis.R
-*Download Samsung data to working directory (per assignment instructions, data is assumed to already be loaded in the user's working directory: 
-###      "The code should have a file run_analysis.R in the 
-###      main directory that can be run as long as the Samsung data is in your 
-###      working directory"
-
-##myTidyData.txt
-Text file containing tidy data as described in codebook.md
-Tidy data can be loaded into R by using: 
-*data <- read.table(file_path, header = TRUE)*
-*view(data)*
-where 'file_path' is the location of the mytidydata.txt file on the computer
+# To Use: 
+* Download and unzip the data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+* Set R's working directory to the UCI HAR data file location, or make sure to save the unzipped file in R's current working directory
+* Download run_analysis.R from https://github.com/HelpfulMe/GetCleanDataProject
+* In R, source the run_analysis code to run run_analysis (you can use 'source("run_analysis.R")')
+* Code will create a tidy dataset titled "mytidydata.txt" in the user's working directory
+* Tidy data can be loaded into R by using: 'mytidydata <- read.table("mytidydata.txt", header = TRUE)'
+* View tidy data by using 'View(mytidydata)'
