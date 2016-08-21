@@ -4,8 +4,8 @@ This repository contains my Getting and Cleaning Data Course Project information
 # Contents
 This repository contains: 
 
-*README.md - a readme document containing details on what the script does and how to run it
-*CodeBook.md - a CodeBook containing a description of the tidy data set, as well as deatils on how run_analysis creates the tidy data set. 
+* README.md - a readme document containing details on what the script does and how to run it
+* CodeBook.md - a CodeBook containing a description of the tidy data set, as well as deatils on how run_analysis creates the tidy data set. 
 * run_analysis.R - R code creating a tidy data set from UCI-HAR
 * mytidydata.txt - text file containing tidy data created by run_analysis.R and described in codebook.md
 
